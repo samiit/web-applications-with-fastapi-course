@@ -1,7 +1,6 @@
 import fastapi
 import fastapi_chameleon
 import uvicorn
-from fastapi.responses import JSONResponse
 from fastapi_chameleon import template
 
 app = fastapi.FastAPI()
@@ -11,10 +10,9 @@ fastapi_chameleon.global_init("templates")
 
 @app.get(path="/")
 @template(template_file="index.html")
-def index():
+def index(user: str = "anon"):
     user_name = "smathew"
-    content = {"user_name": user_name}
-    # return JSONResponse(content={"user_name": user_name})
+    content = {"user_name": user}
     return content
 
 
