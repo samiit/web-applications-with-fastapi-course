@@ -12,5 +12,6 @@ def index(user: str = "anon"):
 
 
 @router.get("/about")
+@template(template_file="home/about.html")
 def about():
     return {"message": "This is the about page"}
