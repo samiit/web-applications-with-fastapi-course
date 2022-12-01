@@ -15,5 +15,20 @@ def index(user: str = "anon"):
     return content
 
 
+@app.get("/about")
+def about():
+    return {"message": "This is the about page"}
+
+
+@app.post("/login")
+def login(login: str, password: str):
+    return {"message": f"You logged in with {login}, and password: {password.upper()}"}
+
+
+@app.get("/logout")
+def logout():
+    return {"message": "You have been logged out!"}
+
+
 if __name__ == "__main__":
     uvicorn.run(app)
