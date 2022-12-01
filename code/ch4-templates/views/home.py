@@ -5,7 +5,7 @@ router = fastapi.APIRouter()
 
 
 @router.get(path="/")
-@template(template_file="index.html")
+@template(template_file="home/index.pt")
 def index(user: str = "anon"):
     content = {"user_name": user.title()}
     return content
