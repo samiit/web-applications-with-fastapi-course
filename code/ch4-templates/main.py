@@ -20,6 +20,11 @@ def about():
     return {"message": "This is the about page"}
 
 
+@app.get("/account")
+def index():
+    return {}
+
+
 @app.post("/login")
 def login(login: str, password: str):
     return {"message": f"You logged in with {login}, and password: {password.upper()}"}
