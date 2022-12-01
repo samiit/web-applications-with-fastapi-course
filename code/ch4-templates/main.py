@@ -13,7 +13,15 @@ def main():
 
 
 def configure():
+    configure_templates()
+    configure_routes()
+
+
+def configure_templates():
     fastapi_chameleon.global_init("templates")
+
+
+def configure_routes():
     app.include_router(home.router)
     app.include_router(account.router)
     app.include_router(packages.router)
