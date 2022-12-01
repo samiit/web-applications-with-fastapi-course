@@ -11,8 +11,7 @@ fastapi_chameleon.global_init("templates")
 @app.get(path="/")
 @template(template_file="index.html")
 def index(user: str = "anon"):
-    user_name = "smathew"
-    content = {"user_name": user}
+    content = {"user_name": user.title()}
     return content
 
 
