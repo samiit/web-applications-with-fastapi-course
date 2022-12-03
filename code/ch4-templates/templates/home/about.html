@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<div metal:use-macro="load: ../shared/_layout.html">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake PyPi</title>
-</head>
+    <div metal:fill-slot="content" tal:omit-tag="True">
+        <div>Here is the message:</div>
+        <h2>${message}</h2>
+    </div>
 
-<body>
-    <h1>Fake PyPi</h1>
-    <div>Here is the message:</div>
-    <h2>${message}</h2>
-</body>
-
-</html>
+</div>

@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake PyPi</title>
+    <style>
+        body {
+            background-color: rgb(171, 185, 150);
+        }
+    </style>
 </head>
 
 <body>
@@ -13,8 +18,8 @@
     <h1>PyPi Website</h1>
 
     <nav>
-        <a target="/">Home</a>
-        <a target="/about">About</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
     </nav>
     <div class="main-content">
         <div metal:define-slot="content" tal:omit-tag="True">No content</div>
