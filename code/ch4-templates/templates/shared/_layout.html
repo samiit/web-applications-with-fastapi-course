@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake PyPi</title>
+</head>
+
+<body>
+
+    <h1>PyPi Website</h1>
+
+    <nav>
+        <a target="/">Home</a>
+        <a target="/about">About</a>
+    </nav>
+    <div class="main-content">
+        <div metal:define-slot="content" tal:omit-tag="True">No content</div>
+
+    </div>
+
+    <hr>
+    <footer>Thanks for visiting. Hope you had a <strong>good time</strong> with us!<br>
+        We are at <abbr title="Indian Institute of Technology, Madras">IITM</abbr>.<br>
+        Follow me on GitHub: <a href="https://www.github.com/samiit" target="_blank" rel="noreferer"
+            rel="noopener">@samiit</a> <br>
+        &lt;&lt;&copy; Sam Mathew &gt;&gt;</footer>
+</body>
+
+</html>
