@@ -6,20 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake PyPi</title>
-    <link rel="stylesheet" href="static/site.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic|Source+Code+Pro:500">
+
+    <link rel="stylesheet" href="/static/external/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/static/css/site.css" />
+    <link rel="stylesheet" href="/static/css/nav.css" />
+
+    <div metal:define-slot="additional-css" tal:omit-tag="True"></div>
 </head>
 
 <body>
 
-    <h1>PyPi Website</h1>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse navbar-expand-md">
+        <a class="navbar-brand" href="/"><img src="/static/img/pypi-logo.svg" /></a>
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
+        <button class="navbar-toggler navbar-toggle" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <div class="navbar-toggler-icon">
+                <div class="nav-expand-line"></div>
+                <div class="nav-expand-line"></div>
+                <div class="nav-expand-line"></div>
+            </div>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Donate</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                <li class="nav-item"><a class="nav-link" href="/account/login">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/account/register" id="last_nav_link">Register</a></li>
+            </ul>
+        </div>
     </nav>
+
+
     <div class="main-content">
         <div metal:define-slot="content" tal:omit-tag="True">No content</div>
-
     </div>
 
     <hr>
@@ -27,7 +53,16 @@
         We are at <abbr title="Indian Institute of Technology, Madras">IITM</abbr>.<br>
         Follow me on GitHub: <a href="https://www.github.com/samiit" target="_blank" rel="noreferer"
             rel="noopener">@samiit</a> <br>
-        &lt;&lt;&copy; Sam Mathew &gt;&gt;</footer>
+        &lt;&lt;Copyright &copy; Sam Mathew &gt;&gt; <br>
+        <a href="https://pravartak.org.in/">Pravartak Foundation</a>.
+    </footer>
+
+    <script src="/static/external/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/static/external/js/popper.min.js"></script>
+    <script src="/static/external/js/bootstrap.min.js"></script>
+
+    <div metal:define-slot="additional-js" tal:omit-tag="True"></div>
+
 </body>
 
 </html>
