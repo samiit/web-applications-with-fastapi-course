@@ -2,7 +2,9 @@
 
     <div metal:fill-slot="content" tal:omit-tag="True">
         <div>Here is the message:</div>
-        <h2>${message}</h2>
+        <h2>${message.upper()}</h2>
+        <p>The name that we are so familiar with today, ${company} GmBH was not all that known when it first started as
+            an apparel firm in the year ${year}.</p>
     </div>
 
 </div>
